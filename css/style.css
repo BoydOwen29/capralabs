@@ -81,20 +81,7 @@ html{scroll-behavior:smooth}
   overflow:hidden;
 }
 .about-media img{width:100%;height:auto;object-fit:contain;border-radius:12px;display:block;max-width:100%}
-.approach .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-
-.approach-compact{padding:6px 0 2px}
-.approach-benefits{list-style:none;display:flex;gap:18px;padding:0;margin:12px 0 0;justify-content:space-between}
-.approach-benefits li{background:var(--surface);padding:10px 12px;border-radius:10px;flex:1;box-shadow:0 8px 20px rgba(2,6,23,0.04);text-align:center}
-.approach-benefits li small{color:var(--muted);display:block;margin-top:6px;font-weight:500}
-
-.approach-sub{color:var(--muted);font-weight:600;margin-top:6px}
-.approach-details{list-style:none;padding:8px 0 0;margin:8px 0 0;color:var(--muted);font-size:0.95rem;line-height:1.35}
-.approach-details li{padding:4px 0}
-
-@media (max-width:700px){
-  .approach-benefits{flex-direction:column;gap:10px}
-}
+.approach .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:24px}
 
 /* Desktop layout uses the default .main-nav rules defined earlier; removed aggressive overrides that caused leakage */
 
