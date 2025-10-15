@@ -1,0 +1,227 @@
+:root{
+  /* CapraLabs palette */
+  --bg:#f7faf9; /* soft off-white */
+  --surface:#ffffff;
+  --primary:#062e2b; /* deep petrol */
+  --primary-contrast:#ffffff;
+  --accent:#ff6f3c; /* coral */
+  --accent-2:#1f7a8c; /* teal */
+  --muted:#5b6b6a;
+  --radius:12px;
+  --container:1100px;
+  --header-height:70px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+.prevent-x-overflow, html,body{height:100%}
+/* Prevent accidental horizontal scroll due to wide elements (defensive) */
+html, body { overflow-x: hidden; }
+body{font-family:Inter, Roboto, system-ui, sans-serif;margin:0;background:var(--bg);color:var(--primary);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.container{max-width:var(--container);margin:0 auto;padding:20px}
+
+/* Responsive container padding to avoid edge overflow on small screens */
+.container{padding-left:clamp(12px,3vw,20px);padding-right:clamp(12px,3vw,20px)}
+
+/* Ensure media elements never exceed their container */
+img, svg, video, iframe { max-width:100%; height:auto; display:block; }
+.nav-overlay{position:fixed;inset:0;background:rgba(2,20,15,0.4);backdrop-filter:blur(4px);opacity:0;pointer-events:none;transition:opacity .28s ease;z-index:9997}
+.nav-overlay.active{opacity:1;pointer-events:auto}
+.site-header{position:fixed;top:0;left:0;right:0;height:var(--header-height);background:linear-gradient(90deg,var(--primary), color-mix(in srgb,var(--primary) 70%, #043633 30%));color:var(--primary-contrast);backdrop-filter:none;z-index:9999;box-shadow:0 8px 30px rgba(2,20,15,0.18);display:flex;align-items:center}
+.site-header .container{padding:0 20px}
+
+/* offset the page content so the fixed header does not overlap it */
+.main{padding-top:calc(var(--header-height) + 12px)}
+.header-row{display:flex;align-items:center;gap:16px}
+.brand{font-weight:700;color:var(--primary-contrast);font-size:18px;text-decoration:none;position:absolute;left:18px;display:flex;align-items:center;z-index:30}
+.brand img{height:calc(var(--header-height) - 14px);width:auto;object-fit:contain;display:block;border-radius:6px}
+.main-nav{position:static;left:auto;transform:none;display:flex;gap:18px;align-items:center;z-index:20}
+html{scroll-behavior:smooth}
+.main-nav a{margin:0 14px;color:rgba(255,255,255,0.96);text-decoration:none;font-weight:600}
+.main-nav a:hover{opacity:0.92;text-decoration:underline}
+.header-actions{position:absolute;right:18px;top:50%;transform:translateY(-50%);display:flex;gap:8px;align-items:center;z-index:30}
+.lang-btn{background:transparent;color:rgba(255,255,255,0.96);border:1px solid rgba(255,255,255,0.12);padding:6px 10px;border-radius:8px;cursor:pointer;font-weight:700}
+/* highlighted selected language */
+.lang-btn[aria-pressed="true"]{background:rgba(255,255,255,0.12);color:#fff;box-shadow:0 6px 18px rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.15)}
+.lang-btn:focus{outline:3px solid rgba(255,255,255,0.16);outline-offset:2px}
+.menu-toggle{display:none;background:transparent;border:0;padding:6px 8px;font-size:18px}
+.hero{background:linear-gradient(180deg,#EAF6F5,#fff);min-height:calc(100vh - var(--header-height));display:flex;align-items:center}
+.hero-inner{display:flex;gap:24px;align-items:center;justify-content:center;width:100%}
+.hero > .container{height:100%;display:flex;align-items:center}
+.hero, .hero *{box-sizing:border-box}
+.hero-copy{flex:0 1 720px;text-align:center;max-width:720px;display:flex;flex-direction:column;justify-content:center;gap:18px;padding:12px}
+.hero h1{font-size:32px;margin:0 0 12px;color:var(--primary);line-height:1.08}
+.kicker{font-weight:700;color:var(--accent-2);margin-bottom:8px;letter-spacing:0.2px;font-size:14px}
+.lead{color:var(--muted);margin-bottom:12px}
+.hero-list{margin:12px auto 18px;padding:14px 18px;color:var(--muted);display:block;max-width:560px;text-align:left;border-radius:10px;background:var(--surface);box-shadow:0 10px 30px rgba(2,6,23,0.06)}
+.hero-media{display:block;flex:0 0 420px;max-width:46%;border-radius:12px;overflow:hidden}
+.hero-media img{width:100%;height:100%;object-fit:cover;display:block}
+.btn{display:inline-block;color:#fff;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:700;margin-top:16px;border:none;cursor:pointer}
+.btn-primary{background:linear-gradient(90deg,var(--accent),#ff8f5c);box-shadow:0 8px 24px rgba(255,111,60,0.12)}
+
+/* Larger, more prominent CTA in hero */
+.hero-ctas .btn-primary{padding:14px 22px;font-size:18px;border-radius:12px;min-width:180px}
+.hero-ctas .btn{display:inline-flex;align-items:center;justify-content:center}
+.btn-ghost{background:transparent;color:var(--primary);border:1px solid rgba(6,46,43,0.08)}
+.services .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:16px}
+.section--alt{background:linear-gradient(180deg,#eaf7f5,#f3fbfa);padding:36px 0;border-top:1px solid rgba(6,46,43,0.06);border-bottom:1px solid rgba(6,46,43,0.04)}
+.section-title{color:var(--primary);display:inline-block;padding:6px 12px;border-radius:8px;background:linear-gradient(90deg,var(--accent-2),var(--accent));color:#fff;font-weight:700}
+.card{background:var(--surface);padding:20px;border-radius:12px;box-shadow:0 12px 30px rgba(7,48,51,0.06);transition: transform .18s ease, box-shadow .18s ease}
+.card h3{margin-top:0;color:var(--primary)}
+.card::before{content:"";display:block;height:6px;width:48px;background:linear-gradient(90deg,var(--accent),var(--accent-2));border-radius:6px;margin-bottom:10px}
+.card-media{height:120px;border-radius:8px;background:linear-gradient(180deg,#fff,#f3f6f7);margin-bottom:12px}
+.card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(7,48,51,0.08)}
+.about-grid{display:grid;grid-template-columns:1fr 340px;gap:24px;align-items:center}
+.about-copy p{color:var(--muted);line-height:1.6}
+.about-media{ /* allow the image to size naturally so it isn't cropped */
+  border-radius:12px;
+  background:linear-gradient(180deg,#fff,#f3f6f7);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+.about-media img{width:100%;height:auto;object-fit:contain;border-radius:12px;display:block;max-width:100%}
+.approach .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+
+.approach-compact{padding:6px 0 2px}
+.approach-benefits{list-style:none;display:flex;gap:18px;padding:0;margin:12px 0 0;justify-content:space-between}
+.approach-benefits li{background:var(--surface);padding:10px 12px;border-radius:10px;flex:1;box-shadow:0 8px 20px rgba(2,6,23,0.04);text-align:center}
+.approach-benefits li small{color:var(--muted);display:block;margin-top:6px;font-weight:500}
+
+.approach-sub{color:var(--muted);font-weight:600;margin-top:6px}
+.approach-details{list-style:none;padding:8px 0 0;margin:8px 0 0;color:var(--muted);font-size:0.95rem;line-height:1.35}
+.approach-details li{padding:4px 0}
+
+@media (max-width:700px){
+  .approach-benefits{flex-direction:column;gap:10px}
+}
+
+/* Desktop layout uses the default .main-nav rules defined earlier; removed aggressive overrides that caused leakage */
+
+/* ensure anchored headings sit below fixed header */
+.section-strong{background:linear-gradient(180deg,var(--primary), color-mix(in srgb, var(--primary) 80%, #ffffff 20%)); color:var(--primary-contrast);}
+.section-strong a{color:var(--primary-contrast)}
+.section-strong .btn-ghost{border-color:rgba(255,255,255,0.18);color:var(--primary-contrast)}
+.section-strong .card{background:transparent;box-shadow:none;border:1px solid rgba(255,255,255,0.04)}
+.section-strong .section-lead{color:rgba(255,255,255,0.9)}
+section[id]{scroll-margin-top:calc(var(--header-height) + 20px)}
+
+/* global separators & spacing to increase contrast between sequential sections */
+section{padding:44px 0}
+section + section{border-top:1px solid rgba(6,46,43,0.04)}
+
+/* decorative subtle divider between sections (thin gradient band) */
+.section-divider{height:8px;background:linear-gradient(90deg, rgba(1,40,35,0.06), rgba(255,255,255,0));margin:0}
+.grid{display:grid;gap:16px}
+.contact-form{display:grid;gap:10px;max-width:520px;margin:0 auto}
+input,textarea,select{padding:12px;border-radius:10px;border:1px solid rgba(6,46,43,0.06);background:#fff}
+.site-footer{padding:30px 0;text-align:center;color:var(--muted)}
+
+/* Contact two-column layout: info (left) + form (right) */
+.contact-grid{display:grid;grid-template-columns:340px minmax(420px, 1fr);gap:32px;align-items:start;margin-top:18px}
+.contact-info{background:var(--surface);padding:20px;border-radius:12px;box-shadow:0 12px 34px rgba(7,48,51,0.04)}
+.contact-intro{margin-top:0;color:var(--muted);font-size:0.98rem}
+.contact-item{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px dashed rgba(6,46,43,0.04)}
+.contact-item:last-child{border-bottom:none}
+.contact-icon{color:var(--accent);flex:0 0 22px}
+.contact-item a{color:var(--primary);text-decoration:none;font-weight:700}
+.contact-item a:hover{text-decoration:underline}
+
+/* Make form wider and inputs full width on desktop */
+.contact-form{max-width:780px;width:100%;display:grid;gap:12px}
+.contact-form input, .contact-form textarea{width:100%;box-sizing:border-box}
+.contact-form label{font-weight:600;color:var(--muted)}
+
+@media (max-width:900px){
+  .contact-grid{grid-template-columns:1fr;gap:14px}
+  .contact-info{order:2}
+  .contact-form{order:1}
+}
+
+/* Ensure section headings and leads inside a .container are centered and aligned consistently */
+section > .container h2,
+section > .container .section-lead {
+  text-align: center;
+  max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-ctas{margin-top:10px;display:flex;gap:12px;justify-content:center}
+
+@media (max-width:900px){
+  .hero-inner{flex-direction:column;align-items:center;gap:18px}
+  .about-grid{grid-template-columns:1fr}
+  /* Keep hero media full-width but allow about-media to size naturally and be centered */
+  .hero-media{display:block;width:100%;height:200px;border-radius:12px;overflow:hidden}
+  .about-media{width:100%;max-width:360px;margin:18px auto}
+  .about-media img{width:auto;max-width:100%;height:auto}
+  .main-nav{display:none}
+  /* Tweak spacing and typography for small screens */
+  .container{padding:12px}
+  .site-header .container{padding:0 10px}
+  /* Larger hero typography on small screens to increase visual presence */
+  .hero h1{font-size:36px;line-height:1.02}
+  .kicker{font-size:20px;font-weight:800}
+  .hero{padding:30px 0 18px}
+  .hero-copy{width:100%;padding:0 10px;text-align:center}
+  .hero-ctas{justify-content:center}
+  .hero-ctas .btn-primary{padding:18px 26px;font-size:20px;min-width:180px}
+  .hero-media img{width:100%;height:100%;object-fit:cover;display:block}
+}
+
+/* Desktop: make hero text larger and more spacious */
+@media (min-width:901px){
+  .hero-copy{max-width:720px;padding:24px}
+  /* Slightly reduce the hero title for the normal/desktop version */
+  .hero h1{font-size:42px}
+  /* Desktop-only decorative background: use the project's fondo.png with a translucent gradient on top
+     to keep text readable while giving a subtle visual backdrop at the top of the site. Path is relative
+     to this CSS file (css/style.css) so the image lives at ../fondo.png. */
+  .hero{
+    background: linear-gradient(rgba(234,246,245,0.72), rgba(255,255,255,0.72)), url('../fondo.png') center/cover no-repeat;
+    background-attachment:scroll;
+    /* keep the min-height rule already defined earlier but ensure layering looks correct */
+    min-height: calc(100vh - var(--header-height));
+  }
+  .kicker{font-size:20px}
+}
+
+/* Desktop: center the nav inside the header without overlaying content */
+@media (min-width:901px){
+  .main-nav{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;gap:18px;align-items:center}
+}
+
+/* Mobile menu overlay */
+@media (max-width:700px){
+  .menu-toggle{display:inline-block}
+  /* side panel nav */
+  .main-nav{position:fixed;top:0;right:-100%;height:100vh;width:86vw;max-width:380px;background:linear-gradient(180deg, rgba(6,46,43,0.98), rgba(3,30,27,0.96));color:#fff;padding:28px 18px;display:flex;flex-direction:column;gap:12px;align-items:flex-start;z-index:9998;transition:right .34s cubic-bezier(.2,.9,.2,1)}
+  .main-nav.open{right:0}
+  .main-nav a{color:rgba(255,255,255,0.96);font-size:18px;padding:12px 6px;text-decoration:none;display:block}
+  .main-nav a:hover{text-decoration:underline}
+  /* sections should flow naturally on mobile */
+  section{min-height:auto;padding:28px 0}
+  .site-footer{padding:20px 0}
+}
+
+/* Desktop: ensure nav is inside header and not a fixed panel */
+@media (min-width:701px){
+  .main-nav{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    display:flex;
+    gap:18px;
+    align-items:center;
+    z-index:20;
+    background:transparent;
+    padding:0;
+    height:auto;
+    width:auto;
+  }
+  /* Prevent .open from making it a panel on desktop */
+  .main-nav.open{right:auto !important;transform:translate(-50%,-50%) !important;position:relative !important}
+  .nav-overlay{display:none !important;opacity:0 !important;pointer-events:none !important}
+}
