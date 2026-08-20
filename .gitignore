@@ -12,3 +12,4 @@ Thumbs.db
 
 # Node modules (por si usas npm en el futuro)
 node_modules/
+_originales_backup/

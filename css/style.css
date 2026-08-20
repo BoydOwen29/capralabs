@@ -44,7 +44,35 @@ html{scroll-behavior:smooth}
 .lang-btn[aria-pressed="true"]{background:rgba(255,255,255,0.12);color:#fff;box-shadow:0 6px 18px rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.15)}
 .lang-btn:focus{outline:3px solid rgba(255,255,255,0.16);outline-offset:2px}
 .menu-toggle{display:none;background:transparent;border:0;padding:6px 8px;font-size:18px}
-.hero{background:linear-gradient(180deg,#EAF6F5,#fff);min-height:calc(100vh - var(--header-height));display:flex;align-items:center}
+/* Hero: la ilustracion (fondo) es un banner apaisado de 2.78:1, no una textura.
+   Se ancla abajo a su proporcion natural (`100% auto`) para que nunca se recorte
+   ni se agrande de mas; el degradado ocupa el resto. Antes usaba `cover`, que en
+   movil recortaba el 80% de la imagen. */
+.hero{
+  position:relative;
+  overflow:hidden;
+  min-height:calc(100vh - var(--header-height));
+  display:flex;
+  align-items:center;
+  background:linear-gradient(180deg,#EAF6F5 0%,#f2faf9 42%,#ffffff 78%);
+  padding-bottom:clamp(150px,24vh,300px);
+}
+.hero::after{
+  content:"";
+  position:absolute;
+  left:0;right:0;bottom:0;
+  aspect-ratio:1024/369;
+  max-height:46vh;          /* en pantallas muy anchas la banda no invade el texto */
+  /* fallback JPEG primero; los navegadores que entienden image-set usan el WebP */
+  background:url('../fondo.jpg') bottom center / 100% auto no-repeat;
+  background-image:-webkit-image-set(url('../fondo.webp') type('image/webp'), url('../fondo.jpg') type('image/jpeg'));
+  background-image:image-set(url('../fondo.webp') type('image/webp'), url('../fondo.jpg') type('image/jpeg'));
+  -webkit-mask-image:linear-gradient(180deg, transparent 0, #000 18%);
+  mask-image:linear-gradient(180deg, transparent 0, #000 18%);
+  pointer-events:none;
+  z-index:0;
+}
+.hero-inner{position:relative;z-index:1}
 .hero-inner{display:flex;gap:24px;align-items:center;justify-content:center;width:100%}
 .hero > .container{height:100%;display:flex;align-items:center}
 .hero, .hero *{box-sizing:border-box}
@@ -143,20 +171,16 @@ section > .container .section-lead {
   .hero-media{display:block;width:100%;height:200px;border-radius:12px;overflow:hidden}
   .about-media{width:100%;max-width:360px;margin:18px auto}
   .about-media img{width:auto;max-width:100%;height:auto}
-  .main-nav{display:none}
   /* Tweak spacing and typography for small screens */
   .container{padding:12px}
   .site-header .container{padding:0 10px}
   /* Larger hero typography on small screens to increase visual presence */
   .hero h1{font-size:36px;line-height:1.02}
   .kicker{font-size:20px;font-weight:800}
-  .hero{
-    padding:30px 0 18px;
-    /* Mobile: also show background image, covering full viewport */
-    background: linear-gradient(rgba(234,246,245,0.78), rgba(255,255,255,0.78)), url('../fondo.png') center/cover no-repeat;
-    background-attachment:scroll;
-    min-height: calc(100vh - var(--header-height));
-  }
+  .hero{padding:30px 0 0;padding-bottom:clamp(140px,26vh,240px);min-height:calc(100vh - var(--header-height))}
+  /* A ancho completo la banda quedaria de solo ~140px en un telefono:
+     la ampliamos al 170% (recorta los laterales simetricos, no la cabra). */
+  .hero::after{background-size:170% auto;aspect-ratio:auto;height:30vh;max-height:260px}
   .hero-copy{width:100%;padding:0 10px;text-align:center}
   .hero-ctas{justify-content:center}
   .hero-ctas .btn-primary{padding:18px 26px;font-size:20px;min-width:180px}
@@ -168,15 +192,7 @@ section > .container .section-lead {
   .hero-copy{max-width:720px;padding:24px}
   /* Slightly reduce the hero title for the normal/desktop version */
   .hero h1{font-size:42px}
-  /* Desktop-only decorative background: use the project's fondo.png with a translucent gradient on top
-     to keep text readable while giving a subtle visual backdrop at the top of the site. Path is relative
-     to this CSS file (css/style.css) so the image lives at ../fondo.png. */
-  .hero{
-    background: linear-gradient(rgba(234,246,245,0.72), rgba(255,255,255,0.72)), url('../fondo.png') center/cover no-repeat;
-    background-attachment:scroll;
-    /* keep the min-height rule already defined earlier but ensure layering looks correct */
-    min-height: calc(100vh - var(--header-height));
-  }
+  .hero{min-height:calc(100vh - var(--header-height))}
   .kicker{font-size:20px}
 }
 
@@ -186,7 +202,7 @@ section > .container .section-lead {
 }
 
 /* Mobile menu overlay */
-@media (max-width:700px){
+@media (max-width:900px){
   .menu-toggle{display:inline-block}
   /* side panel nav */
   .main-nav{position:fixed;top:0;right:-100%;height:100vh;width:86vw;max-width:380px;background:linear-gradient(180deg, rgba(6,46,43,0.98), rgba(3,30,27,0.96));color:#fff;padding:28px 18px;display:flex;flex-direction:column;gap:12px;align-items:flex-start;z-index:9998;transition:right .34s cubic-bezier(.2,.9,.2,1)}
@@ -199,7 +215,7 @@ section > .container .section-lead {
 }
 
 /* Desktop: ensure nav is inside header and not a fixed panel */
-@media (min-width:701px){
+@media (min-width:901px){
   .main-nav{
     position:absolute;
     left:50%;
@@ -218,3 +234,66 @@ section > .container .section-lead {
   .main-nav.open{right:auto !important;transform:translate(-50%,-50%) !important;position:relative !important}
   .nav-overlay{display:none !important;opacity:0 !important;pointer-events:none !important}
 }
+
+/* ============================================================
+   Mejoras: accesibilidad, hero-proof, casos, estados de foco
+   ============================================================ */
+
+/* Skip link: primer tab de la pagina salta al contenido */
+.skip-link{position:absolute;left:-9999px;top:0;z-index:10000;background:var(--accent);color:#fff;padding:12px 18px;border-radius:0 0 10px 0;font-weight:700;text-decoration:none}
+.skip-link:focus{left:0}
+
+/* Foco visible y consistente en todo lo interactivo */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{
+  outline:3px solid var(--accent);outline-offset:2px;border-radius:6px
+}
+.site-header a:focus-visible, .site-header button:focus-visible{outline-color:#fff}
+
+/* Franja de resultados del hero */
+.hero-proof{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:12px 32px;margin:22px 0 0;padding:0}
+.hero-proof li{display:flex;flex-direction:column;align-items:center;min-width:150px}
+.hero-proof strong{font-size:30px;line-height:1.1;color:var(--accent-2);font-variant-numeric:tabular-nums}
+.hero-proof span{font-size:13px;color:var(--muted);max-width:20ch;text-align:center;margin-top:2px}
+
+/* CTA secundario legible sobre el fondo del hero */
+.hero-ctas .btn-ghost{background:rgba(255,255,255,0.72);border:1px solid rgba(6,46,43,0.16);backdrop-filter:blur(2px)}
+.hero-ctas .btn-ghost:hover{background:#fff}
+
+/* Casos: dos columnas, imagen normalizada, sin estilos inline */
+.cases-grid{grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem}
+/* Las imagenes de casos son logos de baja resolucion: `contain` evita que se
+   agranden y se vean borrosas. El fondo rellena el espacio sobrante. */
+.case-media{width:100%;height:160px;object-fit:contain;padding:14px;border-radius:8px;margin-bottom:20px;background:#f2f7f6}
+.cases .card::before{display:none}
+.cases .card h3{margin-bottom:12px}
+.cases .card p{color:var(--muted);line-height:1.55}
+.cases .card strong{color:var(--primary)}
+
+/* Contraste entre secciones consecutivas: about y cases eran identicas */
+#cases.section--alt{background:linear-gradient(180deg,#ffffff,#f7faf9)}
+
+/* Estado del formulario */
+.form-status{margin-top:10px;color:var(--muted)}
+.form-status[hidden]{display:none}
+.form-status.is-error{color:#b02a13;font-weight:600}
+.form-status.is-ok{color:var(--accent-2);font-weight:600}
+.contact-form input[aria-invalid="true"], .contact-form textarea[aria-invalid="true"]{border-color:#b02a13}
+.btn[disabled]{opacity:.6;cursor:progress}
+
+/* Respetar la preferencia de menos movimiento */
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms !important;transition-duration:.01ms !important}
+  .card:hover{transform:none}
+}
+
+@media (max-width:900px){
+  .hero-proof{gap:10px 20px;margin-top:18px}
+  .hero-proof strong{font-size:26px}
+  .hero-proof li{min-width:110px}
+  .hero-ctas{flex-wrap:wrap}
+  .case-media{height:130px}
+}
+
+/* Cierre del pilar "Transferimos": es el diferenciador del posicionamiento */
+.card-note{margin:14px 0 0;padding-top:12px;border-top:1px solid rgba(6,46,43,0.08);color:var(--accent-2);font-weight:700;font-size:0.95rem}
