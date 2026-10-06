@@ -219,8 +219,8 @@ section[id]{scroll-margin-top:calc(var(--header) + 8px)}
   .menu-toggle{display:block}
   /* el blur del header vuelve "fixed" relativo al header y el panel quedaba adentro */
   .site-header{backdrop-filter:none;-webkit-backdrop-filter:none;background:#fff}
-  .main-nav{position:fixed;top:0;right:0;bottom:0;width:min(82vw,320px);flex-direction:column;align-items:stretch;gap:4px;margin:0;padding:calc(var(--header) + 12px) 20px 20px;background:#fff;box-shadow:-20px 0 50px rgba(6,46,43,.18);transform:translateX(105%);transition:transform .28s ease;z-index:9998}
-  .main-nav.open{transform:none}
+  .main-nav{position:fixed;top:0;right:0;bottom:0;width:min(82vw,320px);flex-direction:column;align-items:stretch;gap:4px;margin:0;padding:calc(var(--header) + 12px) 20px 20px;background:#fff;box-shadow:none;transform:translateX(105%);transition:transform .28s ease,box-shadow .28s ease;z-index:9998}
+  .main-nav.open{transform:none;box-shadow:-20px 0 50px rgba(6,46,43,.18)}
   .main-nav a{font-size:1.05rem;padding:12px 14px}
   .main-nav .nav-cta{margin:10px 0 0;text-align:center}
   .header-actions{margin-left:auto;position:relative;z-index:9999}
