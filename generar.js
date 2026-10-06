@@ -34,6 +34,6 @@ const salida = plantilla
 
 fs.writeFileSync(path.join(dir, 'index.html'), salida)
 const ignorar = ['brand', 'nav.open', 'nav.close', 'about.image.alt', 'validation.missing',
-  'validation.email', 'form.thanks', 'form.sending', 'form.error']
+  'validation.email', 'form.thanks', 'form.sending', 'form.error', 'pharma.prefill']
 const restantes = [...sinUsar].filter(k => !ignorar.includes(k))
 console.log('index.html generado.' + (restantes.length ? ' Claves sin usar: ' + restantes.join(', ') : ''))

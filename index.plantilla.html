@@ -11,7 +11,7 @@
   <meta name="theme-color" content="#062e2b" />
 
   <title>{{meta.title}}</title>
-  <meta name="description" content="Consultora de gestión, revenue management y desarrollo a medida: procesos, pricing, plataformas, automatización y datos. Inteligencia de precios para laboratorios farmacéuticos." />
+  <meta name="description" content="Consultoría de gestión, revenue management y desarrollo a medida: procesos, pricing, plataformas, automatización y datos. Inteligencia de precios para laboratorios farmacéuticos." />
   <link rel="canonical" href="https://capralabsdata.com/" />
 
   <link rel="icon" href="capralabs_avatar.png" type="image/png" />
@@ -36,7 +36,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css?v=3" />
 
   <script type="application/ld+json">
   {
@@ -68,9 +68,9 @@
       </a>
       <nav class="main-nav" aria-label="Navegación principal">
         <a href="#services" data-i18n="nav.services">{{nav.services}}</a>
-        <a href="#laboratorios" data-i18n="nav.pharma">{{nav.pharma}}</a>
         <a href="#approach" data-i18n="nav.approach">{{nav.approach}}</a>
         <a href="#cases" data-i18n="nav.cases">{{nav.cases}}</a>
+        <a href="#laboratorios" data-i18n="nav.pharma">{{nav.pharma}}</a>
         <a href="#about" data-i18n="nav.about">{{nav.about}}</a>
         <a href="#contact" class="nav-cta" data-i18n="nav.contact">{{nav.contact}}</a>
       </nav>
@@ -97,6 +97,7 @@
           <a class="btn btn-primary" href="#contact" data-i18n="hero.cta">{{hero.cta}}</a>
           <a class="btn btn-ghost" href="#cases" data-i18n="hero.cta2">{{hero.cta2}}</a>
         </div>
+        <p class="hero-note" data-i18n="hero.note">{{hero.note}}</p>
       </div>
     </section>
 
@@ -158,6 +159,66 @@
       </div>
     </section>
 
+    <!-- ===================================================== cómo trabajamos -->
+    <section id="approach" class="section section--alt" aria-labelledby="approachTitle">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow" data-i18n="approach.eyebrow">{{approach.eyebrow}}</p>
+          <h2 id="approachTitle" data-i18n="approach.title">{{approach.title}}</h2>
+          <p class="section-lead" data-i18n="approach.lead">{{approach.lead}}</p>
+        </header>
+        <ol class="steps">
+          <li class="step"><span class="step-n">01</span><h3 data-i18n="approach.s1.title">{{approach.s1.title}}</h3><p data-i18n="approach.s1.text">{{approach.s1.text}}</p></li>
+          <li class="step"><span class="step-n">02</span><h3 data-i18n="approach.s2.title">{{approach.s2.title}}</h3><p data-i18n="approach.s2.text">{{approach.s2.text}}</p></li>
+          <li class="step"><span class="step-n">03</span><h3 data-i18n="approach.s3.title">{{approach.s3.title}}</h3><p data-i18n="approach.s3.text">{{approach.s3.text}}</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============================================================ casos -->
+    <section id="cases" class="section" aria-labelledby="casesTitle">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow" data-i18n="cases.eyebrow">{{cases.eyebrow}}</p>
+          <h2 id="casesTitle" data-i18n="cases.title">{{cases.title}}</h2>
+          <p class="section-lead" data-i18n="cases.lead">{{cases.lead}}</p>
+        </header>
+        <div class="cases-grid">
+          <article class="case">
+            <img class="case-media" src="mundo_estanterias.png" alt="Mundo Estanterías" width="246" height="205" loading="lazy" decoding="async" />
+            <p class="case-tag" data-i18n="cases.c1.tag">{{cases.c1.tag}}</p>
+            <h3 data-i18n="cases.c1.title">{{cases.c1.title}}</h3>
+            <dl>
+              <dt data-i18n="cases.challenge">{{cases.challenge}}</dt><dd data-i18n="cases.c1.challenge">{{cases.c1.challenge}}</dd>
+              <dt data-i18n="cases.solution">{{cases.solution}}</dt><dd data-i18n="cases.c1.solution">{{cases.c1.solution}}</dd>
+              <dt data-i18n="cases.result">{{cases.result}}</dt><dd class="case-result" data-i18n="cases.c1.result">{{cases.c1.result}}</dd>
+            </dl>
+            <a class="case-link" href="https://www.mundo-estanterias.com/" target="_blank" rel="noopener"><span data-i18n="cases.visit">{{cases.visit}}</span> →</a>
+          </article>
+          <article class="case">
+            <div class="case-media case-media--text" aria-hidden="true">Reliquia · Neco</div>
+            <p class="case-tag" data-i18n="cases.c2.tag">{{cases.c2.tag}}</p>
+            <h3 data-i18n="cases.c2.title">{{cases.c2.title}}</h3>
+            <dl>
+              <dt data-i18n="cases.challenge">{{cases.challenge}}</dt><dd data-i18n="cases.c2.challenge">{{cases.c2.challenge}}</dd>
+              <dt data-i18n="cases.solution">{{cases.solution}}</dt><dd data-i18n="cases.c2.solution">{{cases.c2.solution}}</dd>
+              <dt data-i18n="cases.result">{{cases.result}}</dt><dd class="case-result" data-i18n="cases.c2.result">{{cases.c2.result}}</dd>
+            </dl>
+          </article>
+          <article class="case">
+            <img class="case-media" src="UNLP.jpg" alt="Universidad Nacional de La Plata — Facultad de Ciencias Naturales y Museo" width="343" height="147" loading="lazy" decoding="async" />
+            <p class="case-tag" data-i18n="cases.c3.tag">{{cases.c3.tag}}</p>
+            <h3 data-i18n="cases.c3.title">{{cases.c3.title}}</h3>
+            <dl>
+              <dt data-i18n="cases.challenge">{{cases.challenge}}</dt><dd data-i18n="cases.c3.challenge">{{cases.c3.challenge}}</dd>
+              <dt data-i18n="cases.solution">{{cases.solution}}</dt><dd data-i18n="cases.c3.solution">{{cases.c3.solution}}</dd>
+              <dt data-i18n="cases.result">{{cases.result}}</dt><dd class="case-result" data-i18n="cases.c3.result">{{cases.c3.result}}</dd>
+            </dl>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- ===================================================== laboratorios -->
     <section id="laboratorios" class="section section--dark pharma" aria-labelledby="pharmaTitle">
       <div class="container">
@@ -209,67 +270,7 @@
         </ol>
         <div class="pharma-bottom">
           <p class="pharma-note" data-i18n="pharma.note">{{pharma.note}}</p>
-          <a class="btn btn-accent" href="#contact" data-i18n="pharma.cta">{{pharma.cta}}</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================================================== cómo trabajamos -->
-    <section id="approach" class="section" aria-labelledby="approachTitle">
-      <div class="container">
-        <header class="section-head">
-          <p class="eyebrow" data-i18n="approach.eyebrow">{{approach.eyebrow}}</p>
-          <h2 id="approachTitle" data-i18n="approach.title">{{approach.title}}</h2>
-          <p class="section-lead" data-i18n="approach.lead">{{approach.lead}}</p>
-        </header>
-        <ol class="steps">
-          <li class="step"><span class="step-n">01</span><h3 data-i18n="approach.s1.title">{{approach.s1.title}}</h3><p data-i18n="approach.s1.text">{{approach.s1.text}}</p></li>
-          <li class="step"><span class="step-n">02</span><h3 data-i18n="approach.s2.title">{{approach.s2.title}}</h3><p data-i18n="approach.s2.text">{{approach.s2.text}}</p></li>
-          <li class="step"><span class="step-n">03</span><h3 data-i18n="approach.s3.title">{{approach.s3.title}}</h3><p data-i18n="approach.s3.text">{{approach.s3.text}}</p></li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- ============================================================ casos -->
-    <section id="cases" class="section section--alt" aria-labelledby="casesTitle">
-      <div class="container">
-        <header class="section-head">
-          <p class="eyebrow" data-i18n="cases.eyebrow">{{cases.eyebrow}}</p>
-          <h2 id="casesTitle" data-i18n="cases.title">{{cases.title}}</h2>
-          <p class="section-lead" data-i18n="cases.lead">{{cases.lead}}</p>
-        </header>
-        <div class="cases-grid">
-          <article class="case">
-            <img class="case-media" src="mundo_estanterias.png" alt="Mundo Estanterías" width="246" height="205" loading="lazy" decoding="async" />
-            <p class="case-tag" data-i18n="cases.c1.tag">{{cases.c1.tag}}</p>
-            <h3 data-i18n="cases.c1.title">{{cases.c1.title}}</h3>
-            <dl>
-              <dt data-i18n="cases.challenge">{{cases.challenge}}</dt><dd data-i18n="cases.c1.challenge">{{cases.c1.challenge}}</dd>
-              <dt data-i18n="cases.solution">{{cases.solution}}</dt><dd data-i18n="cases.c1.solution">{{cases.c1.solution}}</dd>
-              <dt data-i18n="cases.result">{{cases.result}}</dt><dd class="case-result" data-i18n="cases.c1.result">{{cases.c1.result}}</dd>
-            </dl>
-            <a class="case-link" href="https://www.mundo-estanterias.com/" target="_blank" rel="noopener"><span data-i18n="cases.visit">{{cases.visit}}</span> →</a>
-          </article>
-          <article class="case">
-            <div class="case-media case-media--text" aria-hidden="true">Reliquia · Neco</div>
-            <p class="case-tag" data-i18n="cases.c2.tag">{{cases.c2.tag}}</p>
-            <h3 data-i18n="cases.c2.title">{{cases.c2.title}}</h3>
-            <dl>
-              <dt data-i18n="cases.challenge">{{cases.challenge}}</dt><dd data-i18n="cases.c2.challenge">{{cases.c2.challenge}}</dd>
-              <dt data-i18n="cases.solution">{{cases.solution}}</dt><dd data-i18n="cases.c2.solution">{{cases.c2.solution}}</dd>
-              <dt data-i18n="cases.result">{{cases.result}}</dt><dd class="case-result" data-i18n="cases.c2.result">{{cases.c2.result}}</dd>
-            </dl>
-          </article>
-          <article class="case">
-            <img class="case-media" src="UNLP.jpg" alt="Universidad Nacional de La Plata — Facultad de Ciencias Naturales y Museo" width="343" height="147" loading="lazy" decoding="async" />
-            <p class="case-tag" data-i18n="cases.c3.tag">{{cases.c3.tag}}</p>
-            <h3 data-i18n="cases.c3.title">{{cases.c3.title}}</h3>
-            <dl>
-              <dt data-i18n="cases.challenge">{{cases.challenge}}</dt><dd data-i18n="cases.c3.challenge">{{cases.c3.challenge}}</dd>
-              <dt data-i18n="cases.solution">{{cases.solution}}</dt><dd data-i18n="cases.c3.solution">{{cases.c3.solution}}</dd>
-              <dt data-i18n="cases.result">{{cases.result}}</dt><dd class="case-result" data-i18n="cases.c3.result">{{cases.c3.result}}</dd>
-            </dl>
-          </article>
+          <a class="btn btn-accent" href="#contact" data-prefill="pharma.prefill" data-i18n="pharma.cta">{{pharma.cta}}</a>
         </div>
       </div>
     </section>
@@ -291,6 +292,23 @@
           </ul>
           <p class="credentials" data-i18n="about.f3">{{about.f3}}</p>
           <a class="case-link" href="https://www.linkedin.com/in/owenboyd/" target="_blank" rel="noopener">LinkedIn →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================== faq -->
+    <section id="faq" class="section section--alt" aria-labelledby="faqTitle">
+      <div class="container faq-grid">
+        <header class="section-head">
+          <p class="eyebrow" data-i18n="faq.eyebrow">{{faq.eyebrow}}</p>
+          <h2 id="faqTitle" data-i18n="faq.title">{{faq.title}}</h2>
+        </header>
+        <div class="faq">
+          <details><summary data-i18n="faq.q1">{{faq.q1}}</summary><p data-i18n="faq.a1">{{faq.a1}}</p></details>
+          <details><summary data-i18n="faq.q2">{{faq.q2}}</summary><p data-i18n="faq.a2">{{faq.a2}}</p></details>
+          <details><summary data-i18n="faq.q3">{{faq.q3}}</summary><p data-i18n="faq.a3">{{faq.a3}}</p></details>
+          <details><summary data-i18n="faq.q4">{{faq.q4}}</summary><p data-i18n="faq.a4">{{faq.a4}}</p></details>
+          <details><summary data-i18n="faq.q5">{{faq.q5}}</summary><p data-i18n="faq.a5">{{faq.a5}}</p></details>
         </div>
       </div>
     </section>
@@ -341,7 +359,7 @@
     </div>
   </footer>
 
-  <script src="js/translations.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/translations.js?v=3"></script>
+  <script src="js/main.js?v=3"></script>
 </body>
 </html>

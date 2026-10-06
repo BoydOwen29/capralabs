@@ -173,6 +173,19 @@
       }
     })
 
+    // Botones que llegan al formulario con el mensaje ya escrito (el de laboratorios).
+    // Solo si el mensaje está vacío: nunca pisa lo que la persona ya escribió.
+    document.querySelectorAll('[data-prefill]').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const msg = form && form.elements.message
+        if(!msg || msg.value.trim()) return
+        const lang = localStorage.getItem('crux-lang') || 'es'
+        const map = translations[lang] || translations.es
+        msg.value = map[btn.getAttribute('data-prefill')] || ''
+        setTimeout(()=>{ msg.focus({preventScroll:true}); msg.setSelectionRange(msg.value.length, msg.value.length) }, 600)
+      })
+    })
+
     // Navegacion por anclas.
     // El CSS ya resuelve el desplazamiento: `scroll-behavior:smooth` en html y
     // `scroll-margin-top` en section[id] compensan el header fijo. Aca solo
