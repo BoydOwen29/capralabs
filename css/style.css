@@ -235,3 +235,4 @@ section[id]{scroll-margin-top:calc(var(--header) + 8px)}
   html{scroll-behavior:auto}
   *{transition:none !important}
 }
+.pharma-cred{margin-top:18px;padding-left:14px;border-left:3px solid var(--accent);font-size:.95rem;color:var(--on-dark)}
