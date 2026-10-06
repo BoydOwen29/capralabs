@@ -1,23 +1,23 @@
-# Crux Consulting — minimal SPA
+# capralabsdata.com
 
-Se creó una versión mínima de la landing en la raíz. Está pensada para trabajarse y publicarse desde el root.
+Sitio de Capra Labs. Estático, publicado con GitHub Pages desde `main` (dominio en `CNAME`).
 
-Estructura creada:
+## Cómo se edita
 
-- `index.html` — single-page app (es/ en toggle)
-- `css/style.css` — estilos
-- `js/main.js` — i18n + form handling
-- `assets/images/` — carpetas reservadas para imágenes (actualmente vacías)
-- `assets/icons/` — carpeta para iconos
+- **Textos:** `js/translations.js`, en español y en inglés. Es la fuente de verdad.
+- **Estructura:** `index.plantilla.html`. Cada `{{clave}}` es un texto de `translations.js`.
+- **Estilos:** `css/style.css`.
 
-Cómo probar rápidamente (Windows PowerShell):
+Después de tocar textos o plantilla:
 
-```powershell
-# abrir en Live Server o lanzar un servidor simple con Python si lo tienes:
-python -m http.server 8000
-# luego abrir http://localhost:8000/
+```bash
+node generar.js
 ```
 
-Notas:
-- La versión base está en español por defecto (persistida en localStorage).
-- El formulario es de ejemplo; necesita integrarlo con Formspree/Netlify/etc. para recibir mensajes.
+Eso regenera `index.html` con el español escrito adentro (para buscadores y para quien
+no tiene JavaScript) y avisa si falta una clave en alguno de los dos idiomas.
+**No editar `index.html` a mano.**
+
+Para verlo local: `python -m http.server 8790` y abrir http://localhost:8790.
+
+El formulario de contacto manda por Web3Forms.

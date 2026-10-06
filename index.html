@@ -1,37 +1,38 @@
 <!doctype html>
+<!-- Generado con `node generar.js`: editar index.plantilla.html y js/translations.js -->
 <html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="theme-color" content="#062e2b" />
 
-  <title>Capra Labs — Consultoría en procesos, automatización y datos</title>
-  <meta name="description" content="Consultoría que detecta el cuello de botella que frena tu negocio y lo resuelve: optimización de procesos, automatización, data &amp; analytics y coaching de equipos." />
+  <title>Capra Labs — Consultora de gestión, pricing y desarrollo a medida</title>
+  <meta name="description" content="Consultora de gestión, revenue management y desarrollo a medida: procesos, pricing, plataformas, automatización y datos. Inteligencia de precios para laboratorios farmacéuticos." />
   <link rel="canonical" href="https://capralabsdata.com/" />
 
-  <!-- Favicon -->
-  <link rel="icon" href="capralabs_icon.png" type="image/png" />
-  <link rel="apple-touch-icon" href="capralabs_icon.png" />
+  <link rel="icon" href="capralabs_avatar.png" type="image/png" />
+  <link rel="apple-touch-icon" href="capralabs_avatar.png" />
 
-  <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Capra Labs" />
   <meta property="og:locale" content="es_AR" />
   <meta property="og:locale:alternate" content="en_US" />
   <meta property="og:url" content="https://capralabsdata.com/" />
-  <meta property="og:title" content="Capra Labs — Consultoría en procesos, automatización y datos" />
-  <meta property="og:description" content="Detectamos el crux que frena tu negocio y lo resolvemos. Recuperá tu tiempo, desbloqueá tu crecimiento." />
+  <meta property="og:title" content="Capra Labs — Gestión, pricing y desarrollo a medida" />
+  <meta property="og:description" content="Ordenamos cómo decide y cómo opera tu empresa: procesos, precios y sistemas hechos para tu negocio." />
   <meta property="og:image" content="https://capralabsdata.com/og-image.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Capra Labs — Consultoría en procesos, automatización y datos" />
-  <meta name="twitter:description" content="Detectamos el crux que frena tu negocio y lo resolvemos. Recuperá tu tiempo, desbloqueá tu crecimiento." />
-  <meta name="twitter:image" content="https://capralabsdata.com/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Capra Labs" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Capra Labs — Gestión, pricing y desarrollo a medida" />
+  <meta name="twitter:description" content="Ordenamos cómo decide y cómo opera tu empresa: procesos, precios y sistemas hechos para tu negocio." />
+  <meta name="twitter:image" content="https://capralabsdata.com/og-image.png" />
 
-  <link rel="preload" as="image" href="fondo.webp" type="image/webp" fetchpriority="high" />
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" />
+  <link rel="stylesheet" href="css/style.css" />
 
   <script type="application/ld+json">
   {
@@ -39,9 +40,9 @@
     "@type": "ProfessionalService",
     "name": "Capra Labs",
     "url": "https://capralabsdata.com/",
-    "logo": "https://capralabsdata.com/capralabs_icon.png",
-    "description": "Consultoría en optimización de procesos, automatización, data & analytics y coaching de equipos.",
-    "email": "owenaom@hotmail.com",
+    "logo": "https://capralabsdata.com/capralabs_avatar.png",
+    "description": "Consultora de gestión, revenue management y desarrollo a medida. Inteligencia de precios para laboratorios farmacéuticos.",
+    "email": "capralabsdata@gmail.com",
     "telephone": "+5491161815101",
     "areaServed": "AR",
     "founder": {
@@ -55,20 +56,22 @@
 </head>
 <body>
   <a class="skip-link" href="#hero">Saltar al contenido</a>
-  <header class="site-header" role="banner">
+
+  <header class="site-header">
     <div class="container header-row">
       <a href="#hero" class="brand" aria-label="Capra Labs">
-        <img src="capralabs_icon.png" alt="Capra Labs" width="280" height="89" fetchpriority="high" />
+        <img src="capralabs_icon.png" alt="Capra Labs" width="280" height="89" />
       </a>
-  <nav class="main-nav" role="navigation" aria-label="Main navigation">
-    <a href="#approach" data-i18n="nav.approach">Cómo trabajamos</a>
-  <a href="#services" data-i18n="nav.services">Qué hacemos</a>
-    <a href="#about" data-i18n="nav.about">Nosotros</a>
-    <a href="#cases" data-i18n="nav.cases">Historias de impacto</a>
-    <a href="#contact" data-i18n="nav.contact">Contacto</a>
-  </nav>
-      <div class="header-actions" role="region" aria-label="Language and menu">
-        <div class="lang-switch" role="toolbar" aria-label="Language switch">
+      <nav class="main-nav" aria-label="Navegación principal">
+        <a href="#services" data-i18n="nav.services">Qué hacemos</a>
+        <a href="#laboratorios" data-i18n="nav.pharma">Laboratorios</a>
+        <a href="#approach" data-i18n="nav.approach">Cómo trabajamos</a>
+        <a href="#cases" data-i18n="nav.cases">Casos</a>
+        <a href="#about" data-i18n="nav.about">Quién está detrás</a>
+        <a href="#contact" class="nav-cta" data-i18n="nav.contact">Contacto</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="Idioma">
           <button class="lang-btn" data-lang="es" aria-pressed="true">ES</button>
           <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
         </div>
@@ -76,203 +79,260 @@
       </div>
     </div>
   </header>
-
   <div class="nav-overlay" aria-hidden="true"></div>
 
   <main class="main">
+
+    <!-- ============================================================ hero -->
     <section class="hero" id="hero" aria-labelledby="heroTitle">
       <div class="container hero-inner">
-        <div class="hero-copy">
-          <h1 id="heroTitle" data-i18n="hero.title">Creamos soluciones estratégicas que permiten a tu empresa enfocarse en lo que realmente importa: vender, gestionar y crecer.</h1>
-          <p class="kicker" data-i18n="hero.kicker">Recupera tu tiempo, desbloquea tu negocio</p>
-          <!-- bullet list removed as requested -->
-          <div class="hero-ctas">
-            <a class="btn btn-primary" href="#contact" data-i18n="hero.cta">Contáctanos</a>
-            <a class="btn btn-ghost" href="#cases" data-i18n="hero.cta2">Ver casos reales</a>
-          </div>
-          <ul class="hero-proof" aria-label="Resultados medidos en proyectos reales">
-            <li><strong>70%</strong><span data-i18n="hero.proof1">menos tiempo operativo mensual</span></li>
-            <li><strong>5 → 1</strong><span data-i18n="hero.proof2">días de cierre contable</span></li>
-            <li><strong>+20%</strong><span data-i18n="hero.proof3">clientes nuevos en un trimestre</span></li>
-          </ul>
+        <p class="eyebrow" data-i18n="hero.eyebrow">Consultora de gestión, datos y desarrollo a medida</p>
+        <h1 id="heroTitle" data-i18n="hero.title">Ordenamos cómo <em>decide</em> y cómo <em>opera</em> tu empresa.</h1>
+        <p class="hero-lead" data-i18n="hero.lead">Procesos, precios y sistemas hechos para tu negocio, con más de diez años de experiencia en pricing y revenue management en empresas como Danone y Nielsen. Encontramos lo que te frena, lo resolvemos y nos quedamos para que siga funcionando.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#contact" data-i18n="hero.cta">Hablemos de tu negocio</a>
+          <a class="btn btn-ghost" href="#cases" data-i18n="hero.cta2">Ver casos</a>
         </div>
       </div>
     </section>
 
-    <!-- cases moved to just before contact (see later in document) -->
-
-    <section id="approach" class="container approach" aria-labelledby="approachTitle">
-  <h2 id="approachTitle" data-i18n="approach.title">Cómo trabajamos</h2>
-  <p class="section-lead" data-i18n="approach.lead">En escalada, el <em>crux</em> es el movimiento más difícil: el punto que decide si llegás a la cima. En tu negocio, es ese obstáculo crítico que frena el crecimiento. En CapraLabs lo abordamos con soluciones prácticas —diseñadas e implementadas para que vos y tu equipo puedan concentrarse en lo que mejor saben hacer.</p>
-      <div class="grid">
-        <article class="card">
-          <h3 data-i18n="approach.detect.title">Detectamos el crux</h3>
-          <p data-i18n="approach.detect.sub">Foco en lo que más impacto genera</p>
-          <ul>
-            <li data-i18n="approach.detect.detail1">Diagnóstico</li>
-            <li data-i18n="approach.detect.detail2">Reuniones con equipos</li>
-            <li data-i18n="approach.detect.detail3">Entendimiento en profundidad</li>
-          </ul>
-        </article>
-        <article class="card">
-          <h3 data-i18n="approach.solve.title">Lo resolvemos</h3>
-          <p data-i18n="approach.solve.sub">Entregables operativos y rápidos</p>
-          <ul>
-            <li data-i18n="approach.solve.detail1">Armado de solución a medida</li>
-            <li data-i18n="approach.solve.detail2">Adaptada al contexto y situación particular</li>
-          </ul>
-        </article>
-        <article class="card">
-          <h3 data-i18n="approach.transfer.title">Transferimos</h3>
-          <p data-i18n="approach.transfer.sub">Formamos al equipo para mantener el avance</p>
-          <ul>
-            <li data-i18n="approach.transfer.detail1">Capacitación al equipo que va a operar la solución</li>
-            <li data-i18n="approach.transfer.detail2">Documentación y prácticas operativas</li>
-            <li data-i18n="approach.transfer.detail3">Acompañamiento continuo, no solo en la entrega</li>
-          </ul>
-          <p class="card-note" data-i18n="approach.transfer.note">Vamos en tu misma cordada: cada crux resuelto abre el siguiente.</p>
-        </article>
+    <div class="trust-band">
+      <div class="container trust">
+        <span class="trust-label" data-i18n="hero.trust">Experiencia construida en</span>
+        <ul class="trust-list">
+          <li>Danone</li><li>Nutricia</li><li>Nielsen</li><li>Grupo Cepas</li><li>Intercorp</li><li>Vive Health</li>
+        </ul>
       </div>
-    </section>
+    </div>
 
-  <section id="services" class="container services" aria-labelledby="servicesTitle">
-  <h2 id="servicesTitle" data-i18n="services.title">Nuestras soluciones</h2>
-  <p class="section-lead" data-i18n="services.lead">No solo hacemos productos. Creamos soluciones que liberan tu tiempo y optimizan tu negocio.</p>
-      <div class="grid">
-        <article class="card">
-          <h3 data-i18n="services.process.title">Optimización de procesos</h3>
-          <p data-i18n="services.process.lead">Identificamos cuellos de botella y diseñamos flujos más eficientes.</p>
-          <ul>
-            <li data-i18n="services.process.b1">Ahorra tiempo</li>
-            <li data-i18n="services.process.b2">Reduce errores</li>
-            <li data-i18n="services.process.b3">Incrementa productividad</li>
-          </ul>
-        </article>
-        <article class="card">
-          <h3 data-i18n="services.automation.title">Automatización &amp; Integraciones</h3>
-          <p data-i18n="services.automation.lead">Implementamos tecnología que hace que tus procesos funcionen solos.</p>
-          <ul>
-            <li data-i18n="services.automation.b1">Tareas repetitivas automatizadas</li>
-            <li data-i18n="services.automation.b2">Integración entre herramientas</li>
-            <li data-i18n="services.automation.b3">Escalabilidad de procesos</li>
-          </ul>
-        </article>
-        <article class="card">
-          <h3 data-i18n="services.data.title">Data &amp; Analytics</h3>
-          <p data-i18n="services.data.lead">Transformamos datos en información útil para decisiones rápidas y precisas.</p>
-          <ul>
-            <li data-i18n="services.data.b1">Métricas clave visibles</li>
-            <li data-i18n="services.data.b2">Dashboards claros</li>
-            <li data-i18n="services.data.b3">Decisiones basadas en información</li>
-          </ul>
-        </article>
-        <article class="card">
-          <h3 data-i18n="services.coaching.title">Coaching ejecutivo y de equipos</h3>
-          <p data-i18n="services.coaching.lead">Acompañamos a líderes y equipos para mejorar desempeño y toma de decisiones.</p>
-          <ul>
-            <li data-i18n="services.coaching.b1">Mentoring personalizado</li>
-            <li data-i18n="services.coaching.b2">Talleres de productividad</li>
-            <li data-i18n="services.coaching.b3">Apoyo en transformación digital</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-  <section id="about" class="about section--alt" aria-labelledby="aboutTitle">
+    <!-- ======================================================== servicios -->
+    <section id="services" class="section" aria-labelledby="servicesTitle">
       <div class="container">
-        <h2 id="aboutTitle" data-i18n="about.title">Quién está detrás de CapraLabs</h2>
-        <p class="section-lead" data-i18n="about.lead">Combinamos experiencia estratégica y técnica para ayudarte a superar tu crux.</p>
-          <div class="about-grid">
-            <div class="about-copy">
-              <p data-i18n="about.bio"><a href="https://www.linkedin.com/in/owenboyd/" target="_blank" rel="noopener"><strong>Owen Boyd</strong></a> es consultor estratégico con experiencia en automatización de procesos, data analytics y desarrollo de soluciones a medida. Ha trabajado con empresas para optimizar su gestión, aumentar la eficiencia y liberar tiempo para que los líderes puedan enfocarse en lo que mejor saben hacer.</p>
-              <blockquote data-i18n="about.quote">"Transformamos obstáculos en oportunidades para que tu negocio siga ascendiendo."</blockquote>
-            </div>
-            <div class="about-media" role="img" aria-label="Foto o ilustración Owen Boyd">
-              <img src="owenboyd.png" alt="Owen Boyd" width="800" height="800" loading="lazy" decoding="async" />
-            </div>
-          </div>
+        <header class="section-head">
+          <p class="eyebrow" data-i18n="services.eyebrow">Qué hacemos</p>
+          <h2 id="servicesTitle" data-i18n="services.title">Del diagnóstico a la herramienta funcionando</h2>
+          <p class="section-lead" data-i18n="services.lead">Una sola contraparte que entiende el negocio y además lo construye. Sin pasar el problema de un consultor a un programador y de vuelta.</p>
+        </header>
+        <div class="services-grid">
+          <article class="service">
+            <svg class="service-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h10M4 12h16M4 18h7"/><circle cx="18" cy="6" r="2"/><circle cx="15" cy="18" r="2"/></svg>
+            <h3 data-i18n="services.s1.title">Gestión integral y procesos</h3>
+            <p data-i18n="services.s1.lead">Relevamos cómo se trabaja hoy, encontramos el cuello de botella y rediseñamos el circuito: quién hace qué, con qué información y cuándo.</p>
+            <ul><li data-i18n="services.s1.b1">Diagnóstico de procesos y circuitos</li><li data-i18n="services.s1.b2">Rutinas de seguimiento e indicadores</li><li data-i18n="services.s1.b3">Administración, stock y cierres ordenados</li></ul>
+          </article>
+          <article class="service service--featured">
+            <svg class="service-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17l5-5 4 4 8-8"/><path d="M15 8h5v5"/></svg>
+            <h3 data-i18n="services.s2.title">Revenue management y pricing</h3>
+            <p data-i18n="services.s2.lead">Cómo fijás precios, cuándo los movés y cuánto margen dejás en el camino. Es nuestra especialidad de origen.</p>
+            <ul><li data-i18n="services.s2.b1">Estrategia y política de precios</li><li data-i18n="services.s2.b2">Monitoreo de competencia y de mercado</li><li data-i18n="services.s2.b3">Rentabilidad por producto, canal y cliente</li></ul>
+          </article>
+          <article class="service">
+            <svg class="service-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 9h18M8 21h8"/></svg>
+            <h3 data-i18n="services.s3.title">Plataformas a medida</h3>
+            <p data-i18n="services.s3.lead">Sistemas web hechos para tu operación, no al revés: catálogos, cotizadores, pedidos, reservas y paneles de administración.</p>
+            <ul><li data-i18n="services.s3.b1">Cotizadores y catálogos online</li><li data-i18n="services.s3.b2">Pedidos, stock y disponibilidad</li><li data-i18n="services.s3.b3">Paneles de administración y usuarios</li></ul>
+          </article>
+          <article class="service">
+            <svg class="service-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 0 1 14-5.3M20 12a8 8 0 0 1-14 5.3"/><path d="M18 3v4h-4M6 21v-4h4"/></svg>
+            <h3 data-i18n="services.s4.title">Automatización de flujos</h3>
+            <p data-i18n="services.s4.lead">Lo que hoy se copia a mano entre planillas, mails y sistemas, que pase solo y sin errores.</p>
+            <ul><li data-i18n="services.s4.b1">De planillas sueltas a un sistema</li><li data-i18n="services.s4.b2">Mails, avisos y reportes automáticos</li><li data-i18n="services.s4.b3">Integración entre herramientas</li></ul>
+          </article>
+          <article class="service">
+            <svg class="service-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>
+            <h3 data-i18n="services.s5.title">Datos, informes y tableros</h3>
+            <p data-i18n="services.s5.lead">Datos ordenados y preguntas respondidas: informes puntuales o tableros que se actualizan solos.</p>
+            <ul><li data-i18n="services.s5.b1">Informes de mercado y de negocio</li><li data-i18n="services.s5.b2">Forecasting y modelos de análisis</li><li data-i18n="services.s5.b3">Bases de datos y tableros de control</li></ul>
+          </article>
+          <article class="service">
+            <svg class="service-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg>
+            <h3 data-i18n="services.s6.title">Herramientas ad hoc</h3>
+            <p data-i18n="services.s6.lead">Ese problema puntual que no resuelve ningún software estándar. Lo resolvemos con algo hecho a la medida exacta.</p>
+            <ul><li data-i18n="services.s6.b1">Calculadoras y simuladores</li><li data-i18n="services.s6.b2">Captura y cruce de datos públicos</li><li data-i18n="services.s6.b3">Lo que tu operación necesite</li></ul>
+          </article>
         </div>
-      </section>
+      </div>
+    </section>
 
-    <section id="cases" class="section--alt cases" aria-labelledby="casesTitle">
+    <!-- ===================================================== laboratorios -->
+    <section id="laboratorios" class="section section--dark pharma" aria-labelledby="pharmaTitle">
       <div class="container">
-        <h2 id="casesTitle" data-i18n="cases.title">Historias de impacto</h2>
-        <p class="section-lead" data-i18n="cases.lead">Proyectos donde liberamos tiempo, optimizamos procesos y aumentamos resultados.</p>
-            <div class="grid cases-grid">
-              <article class="card">
-                <img class="case-media" src="UNLP.jpg" alt="Universidad Nacional de La Plata — Facultad de Ciencias Naturales y Museo" width="343" height="147" loading="lazy" decoding="async">
-                <h3 data-i18n="cases.case1.title">Transformación de gestión de datos históricos</h3>
-                <p><strong data-i18n="cases.case1.challenge_label">Desafío:</strong> <span data-i18n="cases.case1.challenge">Una facultad científica con 30+ años de investigaciones tenía sus datos dispersos en múltiples formatos, sin historiales centralizados. Generaban reportes de forma manual (horas de trabajo) y no podían hacer análisis complejos por falta de datos organizados.</span></p>
-                <p><strong data-i18n="cases.case1.solution_label">Solución:</strong> <span data-i18n="cases.case1.solution">Diseñamos e implementamos una arquitectura de base datos PostgreSQL con 7+ tablas relacionales, migramos datos históricos de múltiples fuentes, creamos 12 scripts automatizados de generación de reportes en Python y optimizamos procesos de ingesta de datos.</span></p>
-                <p><strong data-i18n="cases.case1.result_label">Resultado:</strong> <span data-i18n="cases.case1.result">Reducción del 70% en tiempo operativo mensual (de 40 a 12 horas), 15 años de históricos disponibles para análisis, 8 reportes automatizados que se generan sin intervención manual.</span></p>
-              </article>
-              <article class="card">
-                <img class="case-media" src="mundo_estanterias.png" alt="Mundo Estanterías" width="246" height="205" loading="lazy" decoding="async">
-                <h3 data-i18n="cases.case2.title">Modernización digital y optimización operativa</h3>
-                <p><strong data-i18n="cases.case2.challenge_label">Desafío:</strong> <span data-i18n="cases.case2.challenge">Distribuidor mayorista con sitio web obsoleto, contabilidad en planillas desconectadas, seguimiento de inventario manual y procesos de cierre de mes que tardaban 5 días. Pérdida de clientes por mala experiencia web y operaciones ineficientes.</span></p>
-                <p><strong data-i18n="cases.case2.solution_label">Solución:</strong> <span data-i18n="cases.case2.solution">Desarrollamos sitio web responsive con catálogo dinámico +500 productos, rediseñamos 3 procesos clave de contabilidad en Excel, implementamos sistema de seguimiento de stock en tiempo real, integramos automatización de cierre mensual.</span></p>
-                <p><strong data-i18n="cases.case2.result_label">Resultado:</strong> <span data-i18n="cases.case2.result">+20% en clientes nuevos (primer trimestre), reducción de 5 a 1 día en cierre mensual, visibilidad total de inventario (+15% en precisión de stock), mejor planificación de reposición e identificación de productos de lenta rotación.</span></p>
-              </article>
-            </div>
-          </div>
-        </section>
+        <div class="pharma-top">
+          <header class="section-head">
+            <p class="eyebrow" data-i18n="pharma.eyebrow">Industria farmacéutica</p>
+            <h2 id="pharmaTitle" data-i18n="pharma.title">Inteligencia de precios para laboratorios</h2>
+            <p class="section-lead" data-i18n="pharma.lead">Seguimos todos los días los precios de lista de más de 20.000 medicamentos del mercado argentino, desde julio de 2025. Para cada producto sabemos contra quién compite, quién movió el precio, cuándo y cuánto.</p>
+          </header>
 
-    <section id="contact" class="container contact" aria-labelledby="contactTitle">
-  <h2 id="contactTitle" data-i18n="contact.title">Hablemos de tu crux</h2>
-  <p class="section-lead" data-i18n="contact.lead">Recuperemos tu tiempo juntos</p>
-      <div class="contact-grid">
-        <aside class="contact-info" aria-label="Información de contacto">
-          <p class="contact-intro" data-i18n="contact.intro">También podés contactarme directamente usando los datos debajo:</p>
-          <div class="contact-item">
-            <!-- email -->
-            <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M2 6.5A2.5 2.5 0 0 1 4.5 4h15A2.5 2.5 0 0 1 22 6.5v11A2.5 2.5 0 0 1 19.5 20h-15A2.5 2.5 0 0 1 2 17.5v-11zM4.5 6a.5.5 0 0 0-.5.5V8.8l7 4.2 7-4.2V6.5a.5.5 0 0 0-.5-.5h-13z"/></svg>
-            <a href="mailto:owenaom@hotmail.com">owenaom@hotmail.com</a>
-          </div>
-          <div class="contact-item">
-            <!-- phone -->
-            <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M6.6 10.2a15.1 15.1 0 0 0 7.2 7.2l2.1-2.1a1 1 0 0 1 1-.2c1.1.4 2.4.6 3.7.6a1 1 0 0 1 1 1v3.3a1 1 0 0 1-1 1C10.3 21 3 13.7 3 3.7A1 1 0 0 1 4 2.7H7.3a1 1 0 0 1 1 1c0 1.3.2 2.6.6 3.7.2.4.1.9-.2 1.2L6.6 10.2z"/></svg>
-            <a href="tel:+5491161815101">+54 9 11-6181-5101</a>
-          </div>
-          <div class="contact-item">
-            <!-- whatsapp -->
-            <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12.04 2a9.9 9.9 0 0 0-8.5 14.9L2 22l5.25-1.38A9.9 9.9 0 1 0 12.04 2zm0 1.8a8.1 8.1 0 1 1-4.13 15.06l-.3-.18-3.1.82.83-3.03-.2-.31A8.1 8.1 0 0 1 12.04 3.8zm-3.7 4.03c-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.27s.98 2.63 1.11 2.81c.14.18 1.9 3.02 4.157 4.12 1.88.9 2.26.72 2.67.68.41-.04 1.32-.54 1.5-1.06.19-.52.19-.97.13-1.06-.05-.09-.2-.15-.43-.27-.23-.11-1.32-.65-1.53-.72-.2-.08-.35-.11-.5.11-.14.23-.56.72-.69.87-.13.14-.25.16-.47.05-.23-.11-.96-.35-1.83-1.13-.68-.6-1.13-1.35-1.26-1.57-.14-.23-.02-.35.1-.46.1-.1.23-.27.34-.4.11-.14.15-.23.23-.39.07-.15.04-.29-.02-.4-.06-.12-.5-1.22-.69-1.67-.18-.44-.36-.38-.5-.38l-.42-.01z"/></svg>
-            <a href="https://wa.me/5491161815101?text=Hola%20Owen%2C%20te%20contacto%20desde%20tu%20web" target="_blank" rel="noopener" data-i18n="contact.whatsapp">Whatsapp</a>
-          </div>
-          <div class="contact-item">
-            <!-- linkedin -->
-            <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5a2.25 2.25 0 1 1 .001 4.5A2.25 2.25 0 0 1 4.98 3.5zM3 9h4v12H3zM10 9h3.7v1.7h.1c.5-.9 1.7-1.8 3.6-1.8 3.8 0 4.5 2.5 4.5 5.7V21h-4v-5.1c0-1.2 0-2.7-1.7-2.7-1.7 0-1.9 1.3-1.9 2.6V21h-4V9z"/></svg>
-            <a href="https://www.linkedin.com/in/owenboyd" target="_blank" rel="noopener" data-i18n="contact.linkedin">LinkedIn</a>
-          </div>
-        </aside>
+          <figure class="basket">
+            <figcaption class="basket-title" data-i18n="pharma.chart.title">Una canasta de equivalentes</figcaption>
+            <svg viewBox="0 0 360 230" role="img" aria-label="Gráfico ilustrativo de precios de una canasta de equivalentes">
+              <line x1="0" y1="62" x2="360" y2="62" class="basket-median" />
+              <text x="4" y="55" text-anchor="start" class="basket-median-label" data-i18n="pharma.chart.median">mediana</text>
+              <g class="basket-bars">
+                <rect x="6"   y="140" width="28" height="80" />
+                <rect x="46"  y="118" width="28" height="102" />
+                <rect x="86"  y="104" width="28" height="116" class="is-you" />
+                <rect x="126" y="86"  width="28" height="134" />
+                <rect x="166" y="72"  width="28" height="148" />
+                <rect x="206" y="62"  width="28" height="158" />
+                <rect x="246" y="52"  width="28" height="168" />
+                <rect x="286" y="36"  width="28" height="184" />
+                <rect x="326" y="14"  width="28" height="206" />
+              </g>
+              <text x="100" y="96" text-anchor="middle" class="basket-you-label" data-i18n="pharma.chart.you">Tu producto</text>
+            </svg>
+            <p class="basket-caption" data-i18n="pharma.chart.caption">Ilustrativo. Mismo comprimido, distintos laboratorios: el precio de lista de cada uno contra la mediana.</p>
+          </figure>
+        </div>
+
+        <div class="pharma-points">
+          <div><h3 data-i18n="pharma.p1.title">Tu posición, canasta por canasta</h3><p data-i18n="pharma.p1.text">Tu precio contra los equivalentes exactos —misma droga, potencia y presentación— y cuánto te separa de la mediana.</p></div>
+          <div><h3 data-i18n="pharma.p2.title">Quién se mueve primero</h3><p data-i18n="pharma.p2.text">Cada ola de aumentos en orden: quién la abre, quién acompaña y quién llega tarde.</p></div>
+          <div><h3 data-i18n="pharma.p3.title">Precio real contra inflación</h3><p data-i18n="pharma.p3.text">Cuánto aumentaste contra tu categoría y contra el IPC de Salud. Lo que no se ajusta, se pierde.</p></div>
+          <div><h3 data-i18n="pharma.p4.title">Mostrador y canal</h3><p data-i18n="pharma.p4.text">Cuánto paga el paciente con su cobertura, cuánto le concede cada laboratorio a PAMI y si tu producto llega a la góndola.</p></div>
+        </div>
+
+        <blockquote class="pharma-quote" data-i18n="pharma.quote">Las listas de precios se publican como una foto del día: la historia no se puede comprar hacia atrás. Nosotros la venimos guardando.</blockquote>
+
+        <h3 class="offer-title" data-i18n="pharma.offer.title">Cómo se empieza</h3>
+        <ol class="offer">
+          <li><strong data-i18n="pharma.o1.title">Informe de muestra</strong><span data-i18n="pharma.o1.text">Sin cargo: la canasta donde tu posición es más llamativa, con tus productos marcados.</span></li>
+          <li><strong data-i18n="pharma.o2.title">Diagnóstico de cartera</strong><span data-i18n="pharma.o2.text">Todas las canastas donde competís, en un solo documento.</span></li>
+          <li><strong data-i18n="pharma.o3.title">Seguimiento mensual</strong><span data-i18n="pharma.o3.text">Tu cartera actualizada todos los meses, con las canastas que elijas.</span></li>
+          <li><strong data-i18n="pharma.o4.title">Proceso de pricing</strong><span data-i18n="pharma.o4.text">Quién mira los precios, con qué alertas y quién decide un aumento.</span></li>
+        </ol>
+        <div class="pharma-bottom">
+          <p class="pharma-note" data-i18n="pharma.note">Todo sale de fuentes públicas e identificables: no usamos ni compartimos datos de ningún laboratorio. Medimos precio, portafolio y distribución; no volúmenes ni participación de mercado.</p>
+          <a class="btn btn-accent" href="#contact" data-i18n="pharma.cta">Pedí el informe de tu laboratorio</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================== cómo trabajamos -->
+    <section id="approach" class="section" aria-labelledby="approachTitle">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow" data-i18n="approach.eyebrow">Cómo trabajamos</p>
+          <h2 id="approachTitle" data-i18n="approach.title">Socios del crecimiento, no un proyecto que se entrega y se termina</h2>
+          <p class="section-lead" data-i18n="approach.lead">En escalada, el <em>crux</em> es el paso más difícil de la vía: el que decide si llegás arriba. En una empresa es ese obstáculo que frena todo lo demás. Lo encontramos, lo resolvemos y seguimos al lado para el siguiente.</p>
+        </header>
+        <ol class="steps">
+          <li class="step"><span class="step-n">01</span><h3 data-i18n="approach.s1.title">Diagnóstico</h3><p data-i18n="approach.s1.text">Entendemos el negocio antes de proponer nada: los números, los procesos y la gente que los hace funcionar.</p></li>
+          <li class="step"><span class="step-n">02</span><h3 data-i18n="approach.s2.title">Solución</h3><p data-i18n="approach.s2.text">Diseñamos e implementamos lo que haga falta —un proceso, un informe, una plataforma— en semanas, no en meses.</p></li>
+          <li class="step"><span class="step-n">03</span><h3 data-i18n="approach.s3.title">Acompañamiento</h3><p data-i18n="approach.s3.text">Nos quedamos con un servicio mensual: soporte, ajustes y el próximo cuello de botella. Cada crux resuelto abre el siguiente.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============================================================ casos -->
+    <section id="cases" class="section section--alt" aria-labelledby="casesTitle">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow" data-i18n="cases.eyebrow">Casos</p>
+          <h2 id="casesTitle" data-i18n="cases.title">Lo que ya está funcionando</h2>
+          <p class="section-lead" data-i18n="cases.lead">Empresas e instituciones que hoy operan con lo que armamos juntos.</p>
+        </header>
+        <div class="cases-grid">
+          <article class="case">
+            <img class="case-media" src="mundo_estanterias.png" alt="Mundo Estanterías" width="246" height="205" loading="lazy" decoding="async" />
+            <p class="case-tag" data-i18n="cases.c1.tag">Fábrica · Industria metalúrgica</p>
+            <h3 data-i18n="cases.c1.title">Cotizador online y gestión para una fábrica de 50 años</h3>
+            <dl>
+              <dt data-i18n="cases.challenge">Desafío</dt><dd data-i18n="cases.c1.challenge">Sitio obsoleto, contabilidad en planillas desconectadas, inventario seguido a mano y cierres de mes de cinco días.</dd>
+              <dt data-i18n="cases.solution">Solución</dt><dd data-i18n="cases.c1.solution">Sitio nuevo con un configurador que calcula el precio de cada estantería en el momento y arma el pedido por WhatsApp; catálogo de más de 500 productos, seguimiento de stock y cierre mensual automatizado.</dd>
+              <dt data-i18n="cases.result">Resultado</dt><dd class="case-result" data-i18n="cases.c1.result">+20% de clientes nuevos en el primer trimestre, cierre de mes de 5 días a 1 y +15% de precisión de stock.</dd>
+            </dl>
+            <a class="case-link" href="https://www.mundo-estanterias.com/" target="_blank" rel="noopener"><span data-i18n="cases.visit">Ver el sitio</span> →</a>
+          </article>
+          <article class="case">
+            <div class="case-media case-media--text" aria-hidden="true">Reliquia · Neco</div>
+            <p class="case-tag" data-i18n="cases.c2.tag">Alquiler para producciones</p>
+            <h3 data-i18n="cases.c2.title">Plataformas de alquiler para cine, publicidad y eventos</h3>
+            <dl>
+              <dt data-i18n="cases.challenge">Desafío</dt><dd data-i18n="cases.c2.challenge">Dos empresas de alquiler de objetos y textiles manejaban catálogo, disponibilidad, pedidos y cobros entre planillas, fotos sueltas y mails.</dd>
+              <dt data-i18n="cases.solution">Solución</dt><dd data-i18n="cases.c2.solution">Plataformas propias con catálogo por categorías, disponibilidad por fechas, pedidos con varios colaboradores, mails automáticos en cada paso y un panel de administración con cobros y remitos.</dd>
+              <dt data-i18n="cases.result">Resultado</dt><dd class="case-result" data-i18n="cases.c2.result">La operación diaria pasó de planillas a un sistema propio, con acompañamiento mensual para lo que viene.</dd>
+            </dl>
+          </article>
+          <article class="case">
+            <img class="case-media" src="UNLP.jpg" alt="Universidad Nacional de La Plata — Facultad de Ciencias Naturales y Museo" width="343" height="147" loading="lazy" decoding="async" />
+            <p class="case-tag" data-i18n="cases.c3.tag">Investigación científica</p>
+            <h3 data-i18n="cases.c3.title">Gestión de datos históricos de investigación</h3>
+            <dl>
+              <dt data-i18n="cases.challenge">Desafío</dt><dd data-i18n="cases.c3.challenge">Más de 30 años de investigaciones con datos dispersos en múltiples formatos, sin historial centralizado y con reportes armados a mano.</dd>
+              <dt data-i18n="cases.solution">Solución</dt><dd data-i18n="cases.c3.solution">Base de datos relacional en PostgreSQL, migración de los históricos de varias fuentes y 12 procesos automáticos de reportes en Python.</dd>
+              <dt data-i18n="cases.result">Resultado</dt><dd class="case-result" data-i18n="cases.c3.result">70% menos tiempo operativo por mes (de 40 a 12 horas), 15 años de históricos disponibles y 8 reportes que se generan solos.</dd>
+            </dl>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================= quién está -->
+    <section id="about" class="section" aria-labelledby="aboutTitle">
+      <div class="container about-grid">
+        <div class="about-media">
+          <img src="owenboyd.png" alt="Foto de Owen Boyd" width="800" height="800" loading="lazy" decoding="async" />
+        </div>
+        <div class="about-copy">
+          <p class="eyebrow" data-i18n="about.eyebrow">Quién está detrás</p>
+          <h2 id="aboutTitle" data-i18n="about.title">Diez años del lado de adentro de las empresas</h2>
+          <p data-i18n="about.bio1"><strong>Owen Boyd</strong> fundó Capra Labs después de más de una década en estrategia comercial, pricing y datos: lideró la estrategia de pricing nacional de Danone, hizo analítica para la división farmacéutica de Nutricia (Danone Healthcare), planificación y revenue en Grupo Cepas, y modelado para estudios de mercado en Nielsen.</p>
+          <p data-i18n="about.bio2">Hoy lidera un equipo de soluciones analíticas y de inteligencia artificial. Con Capra Labs lleva esa forma de trabajar a empresas que necesitan lo mismo sin tener que armar un área entera.</p>
+          <ul class="facts">
+            <li><strong>10+</strong><span data-i18n="about.f1">años en pricing, revenue y datos</span></li>
+            <li><strong>4</strong><span data-i18n="about.f2">Consumo masivo, farma, banca y salud</span></li>
+          </ul>
+          <p class="credentials" data-i18n="about.f3">Lic. en Comercio Internacional y posgrado en Finanzas (UADE) · Scrum Master y Product Owner (UTN)</p>
+          <a class="case-link" href="https://www.linkedin.com/in/owenboyd/" target="_blank" rel="noopener">LinkedIn →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= contacto -->
+    <section id="contact" class="section section--dark contact" aria-labelledby="contactTitle">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <p class="eyebrow" data-i18n="contact.eyebrow">Contacto</p>
+          <h2 id="contactTitle" data-i18n="contact.title">Contanos qué te está frenando</h2>
+          <p class="section-lead" data-i18n="contact.lead">Una conversación de media hora alcanza para saber si podemos ayudarte. Te respondo personalmente.</p>
+          <ul class="contact-list">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><a href="mailto:capralabsdata@gmail.com">capralabsdata@gmail.com</a></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><a href="tel:+5491161815101">+54 9 11 6181-5101</a></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 0 1-11.8 7L4 20l1.1-4A8 8 0 1 1 20 12z"/></svg><a href="https://wa.me/5491161815101?text=Hola%20Owen%2C%20te%20contacto%20desde%20la%20web%20de%20Capra%20Labs" target="_blank" rel="noopener" data-i18n="contact.whatsapp">WhatsApp</a></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg><a href="https://www.linkedin.com/in/owenboyd/" target="_blank" rel="noopener" data-i18n="contact.linkedin">LinkedIn</a></li>
+          </ul>
+        </div>
 
         <form id="contactForm" class="contact-form" novalidate>
-          <!-- Web3Forms hidden fields -->
           <input type="hidden" name="access_key" value="85efb202-fea9-4e2b-baa2-81e270af02e9">
           <input type="hidden" name="subject" value="Contacto desde Capra Labs">
           <input type="hidden" name="from_name" value="Capra Labs Website">
-          <!-- optional redirect (we will handle response via JS) -->
-          <input type="hidden" name="redirect" value="">
-          <input type="hidden" name="botcheck" value="">
+          <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
 
-          <label for="name" data-i18n="form.name">Nombre</label>
-          <input id="name" name="name" required data-i18n="form.name.placeholder" placeholder="Tu nombre" />
-
+          <div class="form-row">
+            <div><label for="name" data-i18n="form.name">Nombre</label>
+              <input id="name" name="name" required autocomplete="name" data-i18n="form.name.placeholder" placeholder="Tu nombre" /></div>
+            <div><label for="company" data-i18n="form.company">Empresa</label>
+              <input id="company" name="company" autocomplete="organization" data-i18n="form.company.placeholder" placeholder="Opcional" /></div>
+          </div>
           <label for="email" data-i18n="form.email">Email</label>
-          <input id="email" name="email" type="email" required data-i18n="form.email.placeholder" placeholder="tucorreo@ejemplo.com" />
-
+          <input id="email" name="email" type="email" required autocomplete="email" data-i18n="form.email.placeholder" placeholder="tucorreo@empresa.com" />
           <label for="message" data-i18n="form.message">Mensaje</label>
-          <textarea id="message" name="message" required data-i18n="form.message.placeholder" placeholder="Escribe tu mensaje aquí"></textarea>
-
-          <button type="submit" class="btn btn-primary" data-i18n="form.submit">Enviar</button>
+          <textarea id="message" name="message" rows="5" required data-i18n="form.message.placeholder" placeholder="Contanos brevemente qué necesitás"></textarea>
+          <button type="submit" class="btn btn-accent" data-i18n="form.submit">Enviar</button>
           <div id="formStatus" class="form-status" role="status" aria-live="polite" hidden></div>
         </form>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer section-strong" role="contentinfo">
-    <div class="container">
-      <small data-i18n="footer.copy">&copy; <!-- year replaced --> Capra Labs</small>
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <img src="capralabs_avatar.png" alt="" width="40" height="40" />
+      <span data-i18n="footer.tagline">Gestión, pricing y desarrollo a medida · Buenos Aires</span>
+      <small data-i18n="footer.copy">© 2026 Capra Labs</small>
     </div>
   </footer>
 
